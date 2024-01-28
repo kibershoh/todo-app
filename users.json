@@ -1,0 +1,79 @@
+{
+  "users": [
+    {
+      "ID": "667",
+      "name": "Bahodir Olimov",
+      "phones": [
+        {
+          "phone1": "+998456789076",
+          "phone2": "+998111111111"
+        }
+      ],
+      "order": "111111111111111",
+      "userType": "Client",
+      "time": "28:01:2024, 21:58",
+      "active": false,
+      "id": 1
+    },
+    {
+      "ID": "126",
+      "name": "Anvar Baxromov",
+      "phones": [
+        {
+          "phone1": "+998234578976",
+          "phone2": "+998"
+        }
+      ],
+      "order": "563",
+      "userType": "Driver",
+      "time": "28:01:2024, 21:31",
+      "active": true,
+      "id": 2
+    },
+    {
+      "ID": "236",
+      "name": "Dilshod Bekmurodov",
+      "phones": [
+        {
+          "phone1": "+998996966969",
+          "phone2": "+998635695696"
+        }
+      ],
+      "order": "456",
+      "userType": "Client",
+      "time": "28:01:2024, 18:51",
+      "active": true,
+      "id": 3
+    },
+    {
+      "ID": "420",
+      "name": "Baxodir Jalolov",
+      "phones": [
+        {
+          "phone1": "+998947777777",
+          "phone2": "+998888888888"
+        }
+      ],
+      "order": "111",
+      "userType": "Client",
+      "time": "28:01:2024, 20:53",
+      "active": true,
+      "id": 4
+    },
+    {
+      "ID": "333",
+      "name": "Qosimov Dilshod",
+      "phones": [
+        {
+          "phone1": "+998996963658",
+          "phone2": "+998222222222"
+        }
+      ],
+      "order": "444",
+      "userType": "Driver",
+      "time": "28:01:2024, 18:51",
+      "active": true,
+      "id": 5
+    }
+  ]
+}
