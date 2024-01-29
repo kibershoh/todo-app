@@ -10,11 +10,11 @@ import { TbNumber } from "react-icons/tb";import { CiEdit } from "react-icons/ci
 import { AiOutlineDelete } from "react-icons/ai";
 import { TbListDetails } from "react-icons/tb";
 import { FaPlus } from "react-icons/fa6";
+import Row from '../Row';
 
 const DataTable = () => {
     // -----States ------//
     const [data, setData] = useState(null)
-    const [action, setAction] = useState(false)
     const navigate = useNavigate()
 
     // -----Functions------//  
@@ -50,8 +50,7 @@ const DataTable = () => {
         }).catch((errpr) => {
             console.log(errpr.message);
         })
-    }, [])
-
+    }, [])   
 
     return (
 
@@ -96,83 +95,11 @@ const DataTable = () => {
                 <tbody>
                     {
                         data &&
-                        data.map((item) => (
-                            <tr key={item.id} className="border-b">
-
-                                <td className="px-6 text-black py-4">
-                                    {item.id}
-                                </td>
-                                <td className="px-6 text-black py-4">
-                                    {item.ID}
-                                </td>
-                                <td className="px-6 text-black py-4">
-                                    {item.name}
-                                </td>
-                                <td className="px-6 text-black py-4">
-                                    {
-                                        item.phones.map((phone, index) => (
-                                            <h1>{phone.phone1 === '+998' ? '' : phone.phone1}
-                                                <br />
-                                                {phone.phone2 === '+998' ? '' : phone.phone2}
-                                            </h1>
-                                        ))
-                                    }
-                                </td>
-                                <td className="px-6 text-black py-4">
-                                    {item.order}
-                                </td>
-                                <td className="px-6 text-black py-4">
-                                    {item.userType}
-                                </td>
-                                <td className="px-6 text-black py-4">
-                                    {item.time}
-                                </td>
-                                <td className="px-6 text-black py-4 relative">
-                                    <div className='w-full ml-10'>
-                                    </div>
-                                    <button
-                                        onClick={() => { Edit(item.id) }}
-                                        className='text-black p-1 rounded text-lg'>
-                                        <span className='flex items-center'>
-                                            <CiEdit className='text-blue-800 hover:shadow-lg hover:scale-110 duration-500' />
-                                        </span>
-
-
-
-
-
-                                    </button>
-                                    <button
-                                        onClick={() => { Details(item.id) }}
-                                        className='text-black p-1 rounded text-lg'>
-                                        <span className='flex items-center'>
-                                            <TbListDetails className='text-blue-800  hover:shadow-lg hover:scale-110 duration-500' />
-                                        </span>
-
-
-
-
-
-                                    </button>
-                                    <button
-                                        onClick={() => { Delete(item.id) }}
-                                        className='text-black p-1 rounded text-lg'>
-                                        <span className='flex items-center'>
-                                            <AiOutlineDelete className='text-red-500 ml-10 hover:shadow-lg hover:scale-110 duration-500' />
-                                        </span>
-
-
-
-
-
-                                    </button>
-
-
-                                </td>
-
-
+                        data?.map((item) => (
+                            <tr key={item.id}>
+                               <Row  item={item} Edit={Edit} Details={Details} Delete={Delete}/>
                             </tr>
-                        ))
+                            ))
                     }
 
                 </tbody>

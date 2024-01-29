@@ -45,7 +45,7 @@ const AddUser = () => {
     ]
 
     const data = { ID, name, phones, order, userType, time, active };
-    if (ID !== '') {
+    if (ID === '') {
       toast.error("Don't add ID")
     }
     if (name === '') {
