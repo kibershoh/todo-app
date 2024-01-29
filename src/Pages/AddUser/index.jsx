@@ -17,7 +17,6 @@ import { toast } from 'react-toastify';
 import clsx from 'clsx';
 
 const AddUser = () => {
-
   // ----------States----------//
   const [ID, setID] = useState("")
   const [name, setName] = useState("")
@@ -29,8 +28,6 @@ const AddUser = () => {
   const [active, setActive] = useState(true)
   const [addPhone, setAddPhone] = useState(false)
   const navigate = useNavigate()
-
-
 
   // ----------Functions----------//
 
@@ -63,7 +60,7 @@ const AddUser = () => {
       toast.error("Don't add User Type")
     }
 
-    else {
+    else if(ID !== '' && name!=='' && phone!=='+998' && order!=='' && userType!==''){
       fetch("http://localhost:3030/users", {
         method: "POST",
         headers: { "content-type": "application/json" },

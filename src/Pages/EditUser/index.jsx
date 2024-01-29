@@ -81,7 +81,7 @@ const Edit = () => {
             toast.error("Don't add User Type")
         }
 
-        else {
+        else if(ID !== '' && name!=='' && phone1!=='+998' && order!=='' && userType!==''){
             fetch("http://localhost:3030/users/" + id, {
                 method: "PUT",
                 headers: { "content-type": "application/json" },
